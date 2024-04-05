@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "device": "stm32f3_disco",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                //"/home/harun/zephyrproject/zephyr/boards/arm/stm32f3_disco/support/openocd.cfg",
+                "/usr/local/share/openocd/scripts/interface/stlink.cfg",
+                "/usr/local/share/openocd/scripts/target/stm32f3x.cfg"
+            ],
+            "searchDir": [],
+            "showDevDebugOutput": "none",
+            "preLaunchTask": "West Build"
+        },
+        {
+            "name": "Attach",
+            "device": "stm32f3_disco",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/zephyr/zephyr.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                //"/home/harun/zephyrproject/zephyr/boards/arm/stm32f3_disco/support/openocd.cfg",
+                "/usr/local/share/openocd/scripts/interface/stlink.cfg",
+                "/usr/local/share/openocd/scripts/target/stm32f3x.cfg"
+            ],
+            //"serialNumber": "0674FF505277504867234630",
+            "searchDir": [],
+            "showDevDebugOutput": "none"
+        },
+    ]
+}
