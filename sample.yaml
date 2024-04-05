@@ -5,6 +5,8 @@ tests:
     tags:
       - LED
       - gpio
+      - UART
+      - dma
     filter: dt_enabled_alias_with_parent_compat("led0", "gpio-leds")
     depends_on: gpio
     harness: led
